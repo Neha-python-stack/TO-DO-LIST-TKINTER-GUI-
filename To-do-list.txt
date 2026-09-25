@@ -1,0 +1,10 @@
+import tkinter as tk
+
+r=tk.Tk()
+e=tk.Entry(r); e.pack()
+l=tk.Listbox(r); l.pack()
+
+tk.Button(r,text="Add",command=lambda:l.insert(tk.END,e.get())).pack()
+tk.Button(r,text="Delete",command=lambda:l.delete(l.curselection())).pack()
+
+r.mainloop()
